@@ -1,0 +1,112 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/webcrawlerbg"
+    tools:context="com.webcrawler.demo.ImageViewer"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="0" 
+            android:background="@drawable/toolbar">
+            
+            <ImageView
+            android:id="@+id/toolbaricon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:src="@drawable/toolbaricon" />
+            
+            
+           <ProgressBar
+            android:id="@+id/pbHeaderProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_weight="1">
+        	</ProgressBar>
+
+           <TextView
+               android:id="@+id/progressnumber"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:paddingTop="20dp"
+               android:text=""
+               android:textColor="#FFFFFF" />
+            
+            <ImageView
+            android:id="@+id/plus"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="0"
+            android:onClick="getMore"
+            android:src="@drawable/plus" />
+            
+             <ImageView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="0"
+            android:onClick="goToSettings"
+            android:src="@drawable/setting" />
+             
+             <ImageView
+            android:id="@+id/trash"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="0"
+            android:onClick="deleteAll"
+            android:src="@drawable/trash" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_weight="0"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/mainDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:onClick="changeImage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0" >
+
+             <SeekBar
+        android:id="@+id/seek1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_weight="0"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
+

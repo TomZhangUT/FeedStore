@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/webcrawlerbg"
+    tools:context="com.webcrawler.demo.MainActivity$PlaceholderFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0" 
+            android:background="@drawable/toolbar">
+            
+            <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="0"
+            android:src="@drawable/toolbaricon" />
+            
+           <TextView
+               android:id="@+id/spacer"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:gravity="center_horizontal"
+               android:layout_weight="1"
+               android:paddingTop="20dp"
+               android:text="SETTINGS"
+               android:textColor="#FFFFFF" />
+             
+             <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="0"
+            android:onClick="goBack"
+            android:src="@drawable/returnimg" />
+
+        </LinearLayout>
+         
+          
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+            android:id="@+id/minitext3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="NUMBER OF IMAGES TO BE DOWNLOADED:"
+            android:textColor="#000000" />
+            
+            <EditText
+                android:id="@+id/pics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:gravity="center_vertical|center_horizontal"
+                android:hint="ENTER THE NUMBER OF IMAGES YOU WANT"
+                android:textColor="#999999" />
+
+             
+             <TextView
+            android:id="@+id/minitext2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="CONTENT DOWNLOADED DAILY AT:"
+            android:textColor="#000000" />
+             
+                <TimePicker
+                    android:id="@+id/timePicker1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1" />
+
+
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical|center_horizontal"
+                android:onClick="GoToView"
+                android:text="DONE"
+                android:textColor="#000000" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
